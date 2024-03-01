@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 PRODUCT_TARGET_VNDK_VERSION := 30
 
 # API
-PRODUCT_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -29,10 +29,12 @@ PRODUCT_PACKAGES += \
 
 # Dependencies
 TARGET_RECOVERY_DEVICE_MODULES += \
-    libion
+    libion \
+    libdmabufheap
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so
+    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libdmabufheap.so
 
 # Screen
 TARGET_SCREEN_WIDTH := 1080
