@@ -16,10 +16,10 @@
 check_fbe() {
   local fbe_ver=$(grep -o -m1 "fileencryption=ice" "/tmp/vendor/etc/fstab.qcom")
   if [ "$fbe_ver" = "fileencryption=ice" ]; then
-      echo " - file-based encryption detected"
+      echo " - File-based encryption detected"
       disable_fbe
   else
-      echo " - file-based encryption not detected. Aborting..."
+      echo " - File-based encryption not detected. Aborting..."
   fi
 }
 
@@ -31,28 +31,41 @@ disable_fbe() {
       echo " - Done"
 }
 
-if mount | grep /vendor >/dev/null; then
-    umount "/vendor"
-fi
-echo " - Mounting Vendor..."
-mkdir -p "/tmp/vendor";
-blockdev --setrw "/dev/block/mapper/vendor";
-mount -w "/dev/block/mapper/vendor" "/tmp/vendor";
-
+user_approval() {
 echo " - Decrypting..."
 echo " - Warning: This process will wipe your entire /data partition. Type "yes" to continue, or anything else to abort."
 
 read accept
 
 if [ -n "$accept" ] && [ "$accept" = "yes" ]; then
+    mnt_vendor
     check_fbe
+    umnt_vendor
 else
     echo " - Aborting..."
+    umnt_vendor
 fi
+}
 
-echo " - Unmounting Vendor..."
-umount "/tmp/vendor";
-rm -r "/tmp/vendor";
-blockdev --setro "/dev/block/mapper/vendor";
+mnt_vendor() {
+    if mount | grep /vendor >/dev/null; then
+        umount "/vendor"
+    fi
+    echo " - Mounting vendor..."
+    mkdir -p "/tmp/vendor";
+    blockdev --setrw "/dev/block/mapper/vendor";
+    mount -w "/dev/block/mapper/vendor" "/tmp/vendor";
+}
+
+umnt_vendor() {
+    if mount | grep /tmp/vendor >/dev/null; then
+        echo " - Unmounting vendor..."
+        umount "/tmp/vendor";
+        rm -r "/tmp/vendor";
+        blockdev --setro "/dev/block/mapper/vendor";
+    fi
+}
+
+user_approval
 
 exit 0;
