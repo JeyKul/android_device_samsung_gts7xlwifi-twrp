@@ -1,10 +1,12 @@
-# TWRP Device Tree for Samsung Galaxy S20 FE 5G
+# TWRP Device Tree for Samsung Galalaxy Tab S7+ WIFI
 
-The Galaxy S20 FE 5G (codenamed _"r8q"_) is an flagship-range smartphone from Samsung.
+The Galaxy Tab S7+ WIFI (codenamed _"gts7xlwifi"_) is an flagship-range Tablet from Samsung.
 
-It was announced in September 2020 and released in October 2020.
+It was announced and released in August 2021.
 
-There is also a 4G variant that is released with Android 11 in April 2021
+There is also a 5G variant.
+
+![Tab S7+](https://images.samsung.com/is/image/samsung/p6pim/nz/sm-t970nzkexnz/gallery/nz-galaxy-tab-s7-plus-wifi-t970-sm-t970nzkexnz-thumb-426768384)
 
 ## Device specifications
 
@@ -14,20 +16,19 @@ There is also a 4G variant that is released with Android 11 in April 2021
 | CPU                            | Octa-core (1x2.84 GHz Cortex-A77 & 3x2.42 GHz Cortex-A77 & 4x1.80 GHz Cortex-A55)         |
 | GPU                            | Qualcomm Adreno 650                                                                       |
 | Memory                         | 6GB / 8GB RAM (LPDDR5)                                                                    |
-| Shipped OS                     | Android 10 (One UI 2.0) & Android 11 (One UI 3.0)                                         |
-| Storage                        | 128GB / 256GB (UFS 3.1)                                                                   |
+| Shipped OS                     | Android 10 (One UI 2.0) - Android 13 (One UI 5.1.1)                                       |
+| Storage                        | 128GB / 256GB / 512GB (UFS 3.1)                                                           |
 | SIM                            | Single SIM (Nano-SIM) or Hybrid Dual SIM (Nano-SIM, dual stand-by)                        |
 | MicroSD                        | Up to 1TB                                                                                 |
-| Battery                        | 4500mAh Li-Ion (non-removable), 25W fast charge                                           |
-| Dimensions                     | 159.8 x 74.5 x 8.4 mm (6.29 x 2.93 x 0.33 in)                                             |
-| Display                        | 6.5", 1080 x 2400 pixels, 20:9 ratio, Super AMOLED, 120Hz (~407 ppi density)              |
-| Rear Camera 1 (IMX555/S5K2LD)  | 12 MP, f/1.8, 26mm (wide), 1/1.76", 1.8µm, Dual Pixel PDAF, OIS                           |
-| Rear Camera 2 (IMX258/HI1336C) | 12 MP, f/2.2, 13mm, 123˚ (ultrawide), 1/3.0", 1.12µm                                      |
-| Rear Camera 3 (HI847)          | 8 MP, f/2.4, 76mm (telephoto), 1/4.5", 1.0µm, PDAF, OIS, 3x optical zoom                  |
-| Front Camera (IMX616)          | 32 MP, f/2.2, 26mm (wide), 1/2.8", 0.8µm                                                  |
-| Fingerprint                    | Goodix GW9558 (under display, optical)                                                    |
+| Battery                        | 10,090mAh Li-Ion (non-removable), 45W fast charge                                         |
+| Dimensions                     | 285mm 185mm 5,7mm                                                                         |
+| Display                        | 12,4", 2800 x 1752 pixels, 16:10 ratio, Super AMOLED, 120Hz (~407 ppi density)            |
+| Rear Camera 1                  | 13 MP, f/2.0, 26mm (wide)                                                                 |
+| Rear Camera 2 (IMX258/HI1336C) | 5  MP, f/2.2, 12mm, 123˚ (ultrawide)                                                      |
+| Front Camera (IMX616)          | 8  MP, f/2.0, ??mm (wide), 1/4", 1.12µm                                                   |
+| Fingerprint                    | ????????????? (under display, optical)                                                    |
 | Sensors                        | Accelerometer, Gyro, Proximity (virtual), Compass, Hall IC, Grip                          |
-| Extras                         | Dual speakers, NFC, MST                                                                   |
+| Extras                         | quad speakers, MST                                                                        |
 
 ## Copyright
 
