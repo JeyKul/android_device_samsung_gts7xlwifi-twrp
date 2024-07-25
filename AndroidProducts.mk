@@ -6,7 +6,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_r8q.mk
+    $(LOCAL_DIR)/twrp_gts7xlwifi.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_r8q-eng
+    twrp_gts7xlwifi-eng

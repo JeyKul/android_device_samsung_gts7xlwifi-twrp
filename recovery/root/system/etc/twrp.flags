@@ -10,6 +10,7 @@
 # Logical Points
 system              /system      ext4        ro,barrier=1,discard                wait,logical,first_stage_mount
 system              /system      erofs       ro                                  wait,logical,first_stage_mount
+system_ext          /system_ext  ext4        ro,barrier=1,discard                wait,logical,first_stage_mount
 vendor              /vendor      ext4        ro,barrier=1,discard                wait,logical,first_stage_mount
 vendor              /vendor      erofs       ro                                  wait,logical,first_stage_mount
 product             /product     ext4        ro,barrier=1,discard                wait,logical,first_stage_mount
@@ -22,6 +23,7 @@ odm                 /odm         erofs       ro                                 
 /odm_image          emmc         /dev/block/bootdevice/by-name/odm               flags=backup=1;flashimg=1;display="ODM Image"
 /product_image      emmc         /dev/block/bootdevice/by-name/product           flags=backup=1;flashimg=1;display="Product Image"
 /vendor_image       emmc         /dev/block/bootdevice/by-name/vendor            flags=backup=1;flashimg=1
+/system_ext_image   emmc         /dev/block/bootdevice/by-name/system_ext        flags=backup=1;flashimg=1
 
 # ETC Moint Point
 /cache              ext4         /dev/block/bootdevice/by-name/cache
